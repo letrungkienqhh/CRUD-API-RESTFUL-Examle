@@ -25,11 +25,11 @@ public class MainController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = { "/users" }, method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_XML_VALUE })
-	public  String users() {
+	@RequestMapping(value = { "/users" }, method = RequestMethod.GET	, produces = { MediaType.APPLICATION_JSON_VALUE,
+			 		MediaType.APPLICATION_XML_VALUE})
+	public  List<User> users() {
 		List<User> userList= this.userDao.getlist();
-		return "con cho";
+		return userList;
 	}
 
 	@ResponseBody

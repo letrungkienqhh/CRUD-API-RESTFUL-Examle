@@ -1,5 +1,7 @@
 package com.kienletrung.LoginProject;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,7 +53,9 @@ public class UserDao {
 	
 	public List<User> getlist() {
 		// TODO Auto-generated method stub
-		return (List<User>) listUser.values();
+		Collection<User> ds= listUser.values();
+		List<User> result= new ArrayList<User>();
+		result.addAll(ds);
 	}
 
 }
